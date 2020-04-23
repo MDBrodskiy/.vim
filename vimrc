@@ -22,6 +22,8 @@ autocmd Filetype css set omnifunc=csscomplete#CompleteCSS
 
 " Set to PDF_LaTeX from Plain_TeX default
 let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_ViewRule_pdf = 'zathura'    
 
 " Matchit - highlights pairs
 let g:hl_matchit_enable_on_vim_startup = 1
