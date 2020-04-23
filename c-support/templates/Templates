@@ -2,13 +2,13 @@
 §  User Macros
 § ==========================================================
 
-SetMacro( 'AUTHOR',      'Aleksandr Brodskiy' )
-SetMacro( 'AUTHORREF',   'Al' )
-SetMacro( 'COMPANY',     'Brodskiy.com' )
+SetMacro( 'AUTHOR',      'Michael Brodskiy' )
+SetMacro( 'AUTHORREF',   'Michael' )
+SetMacro( 'COMPANY',     'Michael.Brodskiy.com' )
 SetMacro( 'COPYRIGHT',   '' )
-SetMacro( 'EMAIL',       'Al@Brodskiy.com' )
+SetMacro( 'EMAIL',       'Michael@Brodskiy.com' )
 SetMacro( 'LICENSE',     '' )
-SetMacro( 'ORGANIZATION','Brodskiy.com' )
+SetMacro( 'ORGANIZATION','Michael.Brodskiy.com' )
 
 SetStyle( 'C' )
 
