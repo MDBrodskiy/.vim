@@ -14,4 +14,7 @@
   ### Windows 
   
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on a <i> Windows </i> machine these files should be cloned into the <b> `vimfiles` </b> directory under <b> `%HOMEPATH%` </b>
-  
+  <br/><br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for <i> Windows </i> machines, specify the <b><i> BACKSPACE </i></b> key as follows:
+  <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `set backspace=indent,eol,start`
