@@ -12,6 +12,7 @@ Sessionx.vim
 # Temporary
 .netrwhist
 *~
+*.pyc
 # Auto-generated tag files
 tags
 # Persistent undo
