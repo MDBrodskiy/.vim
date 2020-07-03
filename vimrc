@@ -48,6 +48,11 @@ inoremap <C-v> <ESC>"+pa
 vnoremap <C-c> "+y
 nnoremap <C-a> ggVG
 
+" mapping to emulate 'Ctrl-Backspace' to delete previous word in insert mode'
+imap <C-H> <C-W>
+imap <C-BS> <C-W>
+"imap <C-BS> db
+
 " jshint2
 set runtimepath+=~/.vim/bundle/jshint2.vim/
 
