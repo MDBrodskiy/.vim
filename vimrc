@@ -11,6 +11,10 @@ set incsearch
 set mouse=a
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
+set encoding=utf8
+
+"set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
+
 " ignore ex mode
 map q: <Nop>
 nnoremap Q <nop>
@@ -35,9 +39,12 @@ if !has('gui_running')
     set t_Co=256
 endif
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+"let g:lightline = {
+      "\ 'colorscheme': 'wombat',
+      "\ }
+
+let g:airline_theme='wombat'
+let g:airline_powerline_fonts = 1
 
 " NERDTree mapping
 map <C-n> :NERDTreeToggle<CR>
