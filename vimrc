@@ -11,9 +11,8 @@ set incsearch
 set mouse=a
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
-set encoding=utf8
-
-"set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
+" Font for gVim
+set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
 
 " ignore ex mode
 map q: <Nop>
@@ -39,9 +38,21 @@ if !has('gui_running')
     set t_Co=256
 endif
 
-"let g:lightline = {
-      "\ 'colorscheme': 'wombat',
-      "\ }
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component_function': {
+      \   'filetype': 'MyFiletype',
+      \   'fileformat': 'MyFileformat',
+      \ }
+      \ }
+
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! MyFileformat()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
 
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
@@ -49,6 +60,9 @@ let g:airline_powerline_fonts = 1
 " NERDTree mapping
 map <C-n> :NERDTreeToggle<CR>
 "map <F2> :NERDTreeToggle<CR>
+
+let g:ranger_terminal = 'urxvt -e'
+map <leader>e :RangerEdit<cr>
 
 " mapping to emulate 'system clipboard' shortcuts
 inoremap <C-v> <ESC>"+pa
@@ -157,6 +171,12 @@ augroup resCur
         autocmd BufWinEnter * call ResCur()
     endif
 augroup END
+
+set encoding=utf8
+
+let g:webdevicons_enable = 1
+let g:WebDevIconsOS = 'GNU'
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 
 set spell spelllang=en_us
 set dictionary="/usr/share/dict/words"
