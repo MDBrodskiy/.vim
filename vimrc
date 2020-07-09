@@ -116,6 +116,7 @@ set runtimepath+=~/.vim/bundle/jshint2.vim/
  autocmd FileType python nnoremap <buffer> <c-f> :exec '!python' shellescape(expand('%'), 1) <cr>
  " for TeX
  autocmd FileType tex nnoremap <buffer> <c-f> :w <cr> :call Tex_CompileLatex() <cr><cr> :call Tex_ViewLaTeX() <cr>
+ autocmd FileType tex nnoremap <buffer> <c-t> :w <cr> :call Tex_CompileLatex() <cr><cr>
 
 " C++11 for syntastic
 let g:syntastic_cpp_compiler = 'g++'
