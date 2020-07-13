@@ -180,6 +180,7 @@ augroup END
 
 set encoding=utf8
 
-set spell spelllang=en_us
+set spell spelllang=en_us,ru_ru
 set dictionary="/usr/share/dict/words"
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
