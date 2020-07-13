@@ -14,10 +14,13 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 " Font for gVim
 set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
 
-" DevIcons
-let g:WebDevIconsOS = 'GNU'
+" DevIcons 
 let g:WebDevIcons_enable = 1
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
+let g:WebDevIconsOS = 'GNU'
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
+let g:WebDevIconsUnicodeGlpyhDoubleWidth= 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " ignore ex mode
 map q: <Nop>
@@ -180,7 +183,7 @@ augroup END
 
 set encoding=utf8
 
-set spell spelllang=en_us,ru_ru
+set spell spelllang=en_us,ru
 set dictionary="/usr/share/dict/words"
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯЖ;ABCDEFGHIJKLMNOPQRSTUVWXYZ:,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
