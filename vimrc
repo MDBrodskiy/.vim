@@ -14,14 +14,6 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 " Font for gVim
 set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
 
-" DevIcons 
-let g:WebDevIcons_enable = 1
-let g:WebDevIconsOS = 'GNU'
-let g:NERDTreeDirArrowExpandable = '▶'
-let g:NERDTreeDirArrowCollapsible = '▼'
-let g:WebDevIconsUnicodeGlpyhDoubleWidth= 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-
 " ignore ex mode
 map q: <Nop>
 nnoremap Q <nop>
@@ -62,8 +54,20 @@ function! MyFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
+" DevIcons & Airline extensions
+let g:WebDevIconsOS = 'GNU'
 let g:airline_theme='wombat'
+let g:WebDevIcons_enable = 1
 let g:airline_powerline_fonts = 1
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
+"let g:airline_section_b = '%{getcwd()}'
+let g:WebDevIconsUnicodeGlpyhDoubleWidth= 1
+"let g:airline#extensions#tabline#enabled = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#clock#updatetime = 1000
+let g:airline#extensions#clock#format = '%H:%M:%S'
 
 " NERDTree mapping
 map <C-n> :NERDTreeToggle<CR>
