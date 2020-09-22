@@ -122,9 +122,11 @@ set runtimepath+=~/.vim/bundle/jshint2.vim/
  " for css or scss
  autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
  " for java
- autocmd FileType java nnoremap <buffer> <c-f> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1) <cr>
+ autocmd FileType java nnoremap <buffer> <c-f> :w <cr> :exec '!javac' shellescape(expand('%'), 1) '&& java' shellescape(expand('%:r'), 1) <cr>
  " for python
- autocmd FileType python nnoremap <buffer> <c-f> :exec '!python' shellescape(expand('%'), 1) <cr>
+ autocmd FileType python nnoremap <buffer> <c-f> :w <cr> :exec '!python' shellescape(expand('%'), 1) <cr>
+ " for octave
+ autocmd FileType matlab nnoremap <buffer> <c-f> :w <cr> :exec '!octave' shellescape(expand('%'), 1) <cr>
  " for TeX
  autocmd FileType tex nnoremap <buffer> <c-f> :w <cr> :call Tex_CompileLatex() <cr><cr> :call Tex_ViewLaTeX() <cr>
  autocmd FileType tex nnoremap <buffer> <c-t> :w <cr> :call Tex_CompileLatex() <cr><cr>
