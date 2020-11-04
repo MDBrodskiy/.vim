@@ -56,22 +56,28 @@ endfunction
 
 " DevIcons & Airline extensions
 let g:WebDevIconsOS = 'GNU'
-let g:airline_theme='wombat'
+let g:airline_theme='wombat' "letg:airline_theme = 'random'
 let g:WebDevIcons_enable = 1
+"let g:airline_section_y = ''
 let g:airline_detect_spell = 0
 let g:airline_section_error = 0
+"let g:airline_section_z = '%p%%' " '%3p%% %3l/%L:%3v'
 let g:airline_powerline_fonts = 1
 let g:airline_section_warning = 0
 "let g:airline_skip_empty_sections = 1
 let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
-"let g:airline_section_b = '%-0.10{getcwd()}'
+let g:airline_section_b = '%{getcwd()}' " '%-0.10{getcwd()}'
+let g:airline_section_c ='%t' " '%-0.10{getcwd()}'
 let g:WebDevIconsUnicodeGlpyhDoubleWidth= 1
 "let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#wordcount#enabled = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#clock#updatetime = 1000
 let g:airline#extensions#clock#format = '%H:%M:%S'
+"let g:airline#extensions#wordcount#formatter#default#fmt = '%d Words'
+let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|markdown.pandoc|org|rst|tex|text'
 
 " NERDTree mapping
 map <C-n> :NERDTreeToggle<CR>
