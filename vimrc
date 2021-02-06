@@ -12,7 +12,9 @@ set mouse=a
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " Font for gVim
-set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
+set guifont=Hack\ Nerd\ Font\ Bold\ 11
+"set guifont=SauceCodePro\ Nerd\ Font\ Mono\ 11
+"set guifont=SauceCodePro\ Nerd\ Font\ Bold\ 11
 
 " ignore ex mode
 map q: <Nop>
@@ -77,7 +79,8 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#clock#updatetime = 1000
 let g:airline#extensions#clock#format = '%H:%M:%S'
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
-let g:airline#extensions#wordcount#formatter#default#fmt = '%d☷'
+"let g:airline#extensions#wordcount#formatter#default#fmt = '%d☷'
+let g:airline#extensions#wordcount#formatter#default#fmt = '%d'
 let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|markdown.pandoc|org|rst|tex|text'
 let g:airline_section_z = '%p%#__accent_bold#%%%{g:airline_symbols.linenr}%{g:airline_symbols.maxlinenr}%l%#__accent_bold#/%L%#__restore__#:%#__accent_bold#%v%#__restore__#' 
 
