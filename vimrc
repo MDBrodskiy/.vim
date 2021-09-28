@@ -84,6 +84,13 @@ let g:airline#extensions#wordcount#formatter#default#fmt = '%d'
 let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|markdown.pandoc|org|rst|tex|text'
 let g:airline_section_z = '%p%#__accent_bold#%%%{g:airline_symbols.linenr}%{g:airline_symbols.maxlinenr}%l%#__accent_bold#/%L%#__restore__#:%#__accent_bold#%v%#__restore__#' 
 
+" Can be enabled or disabled
+" adding devicons to vim-startify
+let g:webdevicons_enable_startify = 1
+function! StartifyEntryFormat()
+    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
+
 " NERDTree mapping
 map <C-n> :NERDTreeToggle<CR>
 "map <F2> :NERDTreeToggle<CR>
